@@ -1,0 +1,108 @@
+:root {
+  /* Brand Colors */
+  --color-primary: #3b1417; /* Deep Burgundy / Maroon */
+  --color-primary-light: #521d21;
+  --color-primary-dark: #22090b;
+  --color-bg-warm: #FAF7F2; /* Warm Cream background */
+  --color-bg-white: #ffffff;
+  --color-text-dark: #220b0c; /* Deep burgundy/brown text */
+  --color-text-muted: #736162;
+  --color-accent-gold: #c5a880; /* Warm gold */
+  --color-accent-gold-dark: #ab8e66;
+  --color-whatsapp: #25d366;
+  
+  /* Fonts */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Outfit', system-ui, -apple-system, sans-serif;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(34, 11, 12, 0.05);
+  --shadow-md: 0 8px 24px rgba(34, 11, 12, 0.08);
+  --shadow-lg: 0 16px 40px rgba(34, 11, 12, 0.12);
+  
+  /* Transitions */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: all 0.15s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-warm);
+  color: var(--color-text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-fast);
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Typography Utilities */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s forwards;
+}
+
+.animate-slide-left {
+  animation: slideInLeft 0.8s forwards;
+}
+
+.animate-slide-right {
+  animation: slideInRight 0.8s forwards;
+}
